@@ -24,9 +24,67 @@ main {
     margin-bottom: 30px;
     padding: 0 15px
 }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-1{
+    flex: 1;
+}
+/***WRAPPER***/
+.wrapper {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media (min-width: 576px) {
+    .wrapper {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1230px) {
+    .wrapper {
+        max-width: 1230px;
+    }
+}
+/***END WRAPPER***/
+
 
 /***MAIN***/
-.colorVariable {
+.seachButton{
+    font-size: 20px;
+    border-radius: 4px;
+    border: solid 2px;
+    padding: 3px;
+    background-color: #bada55;
+    transition: all 0.3s;
+    
+    &:hover{
+        cursor: pointer;
+        background-color: #a9c944;
+    }
+}
+
+.main__input{
+    font-size: 20px;
+    border-radius: 4px;
+    border: solid 2px;
+    padding: 3px;
+}
+
+.main__color-variable {
     text-shadow: 1px 1px $color-main,
     2px 2px $color-main,
     3px 3px $color-main,
@@ -35,6 +93,13 @@ main {
     6px 6px $color-main,
     7px 7px $color-main;
     color: #fff;
+}
+
+.main__profile-key{
+    margin-bottom: 10px;
+}
+.main__column{
+    flex-direction: column;
 }
 /***END MAIN***/
 
