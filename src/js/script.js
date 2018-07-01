@@ -27,14 +27,13 @@ const fetchUsers = async (user) => {
 const showData = () => {
     //promise
     fetchUsers(inputValue.value).then((res) =>{
-        console.log(res);   
         
-        profileName.innerHTML = `Name: ${res.data.name}`;
-        profileUserName.innerHTML = `Login: ${res.data.login}`;
-        profileRepos.innerHTML = `Public repos: ${res.data.public_repos}`;
-        profileUrl.innerHTML = `URL profile: ${res.data.html_url}`;
-        profileFollowers.innerHTML = `Followers: ${res.data.followers}`;
-        profileFollowing.innerHTML = `Following: ${res.data.following}`;
+        profileName.innerHTML = `Name: <span class="main__profile--span">${res.data.name}</span>`;
+        profileUserName.innerHTML = `Login: <span class="main__profile--span">${res.data.login}</span>`;
+        profileRepos.innerHTML = `Public repos: <span class="main__profile--span">${res.data.public_repos}</span>`;
+        profileUrl.innerHTML = `URL profile: <span class="main__profile--span">${res.data.html_url}</span>`;
+        profileFollowers.innerHTML = `Followers: <span class="main__profile--span">${res.data.followers}</span>`;
+        profileFollowing.innerHTML = `Following: <span class="main__profile--span">${res.data.following}</span>`;
     })
 };
 
